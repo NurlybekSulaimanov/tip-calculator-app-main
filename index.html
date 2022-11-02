@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card-container">
+    <div class="card-body">
+      <div class="card-box1">
+        <div class="yourBill">
+          Bill <input type="number" id="billValue" class="billValue" value="" placeholder="0">
+        </div>
+        <div class="tip" id="tip">
+          Select Tip %
+          <div class="tip1">
+            <button class="tipValue" id="tipValue" onclick="tipV(event)">5%</button>
+            <button class="tipValue" id="tipValue" onclick="tipV(event)">10%</button>
+            <button class="tipValue" id="tipValue" onclick="tipV(event)">15%</button>
+          </div>
+          <div class="tip1">
+            <button class="tipValue" id="tipValue" onclick="tipV(event)">25%</button>
+            <button class="tipValue" id="tipValue" onclick="tipV(event)">50%</button>
+            <input type="number" id="tipValue1" class="tipValue1" value="" placeholder="Custom">
+          </div>
+        </div>
+        <div class="yourPpl">
+          <div  class="top">
+          <p class="num">Number of People </p> 
+          <p class="error" id="error">Can't be zero</p>
+          </div>
+          <input type="number" id="ppl" class="ppl" value="" placeholder="0">
+        </div>
+      </div>
+      <div class="card-box2">
+        <div class="tipAmount">
+          <div class="tipAmount1">
+            <h3 class="amount">Tip Amount</h3>
+            <p class="per">/ person</p>
+          </div>
+          <div class="tipAmount2" id="tipAmount2">$0.00</div>
+        </div>
+        <div class="totalAmount">
+          <div class="totalAmount1">
+            <h3 class="total">Total</h3>
+            <p class="per">/ person</p>
+          </div>
+          <div class="totalAmount2" id="totalAmount2">$0.00</div>
+        </div>
+        <button class="reset" id="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+  <script src="index.js"></script>
+</body>
+
+</html>

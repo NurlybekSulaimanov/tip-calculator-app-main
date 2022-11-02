@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+}
+body{
+    background-color:hsl(185, 41%, 84%)
+    
+}
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+.card-box1{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.yourBill{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.tip{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.tip1, .tip2{
+    display: flex;
+    flex-direction: row;
+}
+.tipValue{
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.yourPpl{
+    display: flex;
+    flex-direction: column; 
+}
+.card-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:  hsl(183, 100%, 15%);
+    border-radius: 15px;
+    width: 350px;
+}
+.billValue, .ppl{
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    text-align: end;
+    border: none;
+}
+.billValue:focus, .ppl:focus, .tipValue1:focus {
+    outline: 3px solid hsl(186, 14%, 43%);
+}
+.tipValue1{
+    background-color: hsl(189, 41%, 97%);
+    text-align: end;
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    outline: none;
+    border: none;
+}
+.tipAmount, .totalAmount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.amount, .total{
+    color: white;
+}
+.per{
+    color: hsl(184, 14%, 56%);
+}
+.tipAmount2, .totalAmount2{
+    color: hsl(185, 41%, 84%);
+    font-size: 30px;
+}
+.reset{
+    margin: 0px 25px 0px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 40px;
+    background-color: hsl(185, 41%, 84%);
+    border: none;
+}
+.reset:hover{
+    background-color: hsl(186, 14%, 43%);
+    border: none;
+}
+.tipValue:hover{
+    background-color: hsl(186, 14%, 43%);
+    border: none;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.error{
+    color: red;
+    display: none;
+}
