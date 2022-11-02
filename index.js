@@ -1,5 +1,4 @@
 let btn = document.getElementById("reset");
-
 function tipV(event) {
     let activeButton = document.getElementById("tipVa")
     if (activeButton) {
@@ -15,13 +14,21 @@ function tipV(event) {
         event.target.setAttribute("id", "tipVa");
         event.target.value = document.getElementById("tipVa").innerHTML
     }
+    document.getElementById('tipValue1').value = ''
 }
+
 btn.addEventListener('click', function () {
     let activeButton = document.getElementById("tipVa")
     let ppl = document.getElementById("ppl").value;
     let billAmount = document.getElementById("billValue").value;
     let tipAmount = document.getElementById("tipValue1").value;
-    let tipAm = document.getElementById("tipVa").value.slice(0, -1);
+    let tipAm = document.getElementById("tipVa");
+    if (document.getElementById("tipVa")!== null){
+        tipAm = document.getElementById("tipVa").value.slice(0, -1)
+        activeButton.style.backgroundColor = "hsl(183, 100%, 15%)";
+        activeButton.setAttribute("id", "tipvalue");
+        activeButton.value = ""
+    }
     let tip = 0;
     console.log(tipAmount)
     if (ppl == 0) {
@@ -33,9 +40,6 @@ btn.addEventListener('click', function () {
         document.getElementById("ppl").style.borderColor = "black";
         if (tipAmount) {
             tip = billAmount * tipAmount / 100 / ppl;
-            activeButton.style.backgroundColor = "hsl(183, 100%, 15%)";
-            activeButton.setAttribute("id", "tipvalue");
-            activeButton.value = ""
         }
         else {
             tip = billAmount * tipAm / 100 / ppl;
